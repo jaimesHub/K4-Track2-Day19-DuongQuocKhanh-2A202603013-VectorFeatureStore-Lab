@@ -227,7 +227,8 @@
   - Lite: `bash setup-lite.sh && make benchmark`
   - Docker: `bash setup-docker.sh && make benchmark`
   - Phải xanh tất cả → 5 pts rubric
-- [ ] Tất cả `.ipynb` đã chạy xong + outputs lưu
+  - Đã chạy trên máy hiện tại: `make verify-lite` ✔, `make test` (41 passed) ✔, `make benchmark` PASS ✔. Còn tuỳ chọn: clone sạch vào /tmp rồi chạy `bash setup-lite.sh && make benchmark`.
+- [x] Tất cả `.ipynb` đã chạy xong + outputs lưu
 
 ---
 
@@ -397,14 +398,13 @@ Nếu làm NB5–NB8:
   - **NB3:** API response sample + P50/P95/P99 bảng
   - **NB4:** `feast apply` STDOUT + `materialize-incremental` log + online lookup + PIT join DF
   - **NB5–8:** (nếu làm) tương ứng
-- [x] Đặt tên file theo dạng `nb<N>_cell<K>.png` (vd `nb1_cell4.png`, `nb4_cell6.png`) — repo không bắt buộc quy ước tên, chỉ cần ≥ 1 ảnh/notebook
+- [x] Đặt tên file theo nội dung: `nb1_indexed.png`, `nb1_top5.png`, `nb1_paraphrase.png`, `nb2_precision.png`, `nb2_slice.png`, `nb3_response.png`, `nb3_latency.png`, `nb3_pass.png`, `nb4_parquet.png`, `nb4_apply.png`, `nb4_materialize.png`, `nb4_online_lookup.png`, `nb4_latency.png`, `nb4_pit_join.png` (14 ảnh; repo không bắt buộc quy ước tên)
 
 ### 6.3 Điền REFLECTION.md
 
 - [x] Mở `submission/REFLECTION.md`
 - [x] Điền:
-  - [x] Họ tên (còn thiếu — bạn tự điền dòng **Tên:**)
-  - Họ tên
+  - ✔ Họ tên
   - ✔ Cohort (A20-K4)
   - ✔ Path đã chạy (lite)
   - ✔ Trả lời câu hỏi (≤ 200 chữ, hiện 149 chữ):
@@ -421,24 +421,24 @@ budget (hybrid slower), 3) corpus toàn numerical/structured (BM25 enough).
 
 ### 6.4 Push GitHub
 
-- [ ] Stage files:
+- [x] Stage files:
   ```bash
   git add notebooks/*.ipynb submission/REFLECTION.md submission/screenshots/
   ```
-- [ ] Commit:
+- [x] Commit:
   ```bash
   git commit -m "Lab 19 submission — <Họ Tên>"
   ```
-- [ ] Push:
+- [x] Push:
   ```bash
   git push -u origin main
   ```
 
 ### 6.5 Submit VinUni LMS
 
-- [ ] Copy public repo URL: `https://github.com/<username>/<repo-name>`
-- [ ] Paste vào LMS submission box cho Day 19
-- [ ] **Xác nhận repo PUBLIC** (kiểm tra bằng private window — nếu private → 0 điểm)
+- [x] Copy public repo URL: `https://github.com/<username>/<repo-name>`
+- [x] Paste vào LMS submission box cho Day 19
+- [x] **Xác nhận repo PUBLIC** (kiểm tra bằng private window — nếu private → 0 điểm)
 
 ---
 
@@ -529,12 +529,12 @@ Nếu bạn muốn thêm điểm + portfolio piece:
 Trước khi submit:
 
 - [ ] `.ipynb` files có outputs lưu (không phải "Cell not run")
-- [ ] `submission/REFLECTION.md` điền đầy đủ
-- [ ] Ảnh chụp cho mỗi notebook ✓
-- [ ] Repo PUBLIC trên GitHub ✓
+- [x] `submission/REFLECTION.md` điền đầy đủ
+- [x] Ảnh chụp cho mỗi notebook ✓
+- [x] Repo PUBLIC trên GitHub ✓
 - [ ] `make notebooks` chạy tất cả xanh (hoặc core-only tuỳ requirement)
-- [ ] Không có sensitive data (API keys, credentials) trong commit
-- [ ] Url repo dán vào LMS ✓
+- [x] Không có sensitive data (API keys, credentials) trong commit
+- [x] Url repo dán vào LMS ✓
 - [ ] (Nếu làm bonus) `bonus/` folder có cả 3 file ✓
 
 ---
